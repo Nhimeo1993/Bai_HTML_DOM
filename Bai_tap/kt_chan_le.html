@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kt_chan_le</title>
+</head>
+<body>
+    Nhập số:<br>
+    <input type="number" id="nhapso"/>
+    <button type="button" onclick="tinhtoan()">Check</button>
+    
+     <script>
+        function tinhtoan(){
+            let numberTxt =  document.getElementById("nhapso");
+            let number = parseInt(numberTxt.value);
+            //let sochuabiet = document.getElementById(nhapso);
+            
+            //let so=parseInt(sochuabiet);
+            if (number %2  == 0)
+            {
+                alert("Số này là số chẵn");
+            }
+            else
+            {
+                alert("Số này là số lẻ");
+            }
+        }
+     </script>   
+</body>
+</html>

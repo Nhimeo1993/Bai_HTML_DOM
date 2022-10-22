@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    
+    <h1><b>Caculator</b></h1>
+    <input type="number" name="so1" id="so1" />
+    <input type="number" name="so2" id="so2" />
+    <br>
+    <button type="button" onclick="phepCong()">Addition(+)</button>
+    <button type="button" onclick="phepTru()">Subtraction(-)</button>
+    <button type="button" onclick="phepNhan()">Multiplication(X)</button>
+    <button type="button" onclick="phepChia()">Division(/)</button>
+    <br>
+    <p id="hienThi">Result Division:</p>
+    <script>
+       
+        function showketqua(pheptoan, giatri){
+               document.getElementById("hienThi").innerHTML = "Result Division: " + pheptoan + "(" + giatri + ")";
+            }
+        function phepCong(){
+            let so1txt = document.getElementById("so1")
+            let somot = parseFloat(so1txt.value);
+            let so2txt = document.getElementById("so2")
+            let sohai = parseFloat(so2txt.value);
+            let cong = somot + sohai;
+            showketqua("Phép Cộng", cong)
+        }
+        function phepTru (){
+            let so1txt = document.getElementById("so1")
+            let somot = parseFloat(so1txt.value);
+            let so2txt = document.getElementById("so2")
+            let sohai = parseFloat(so2txt.value);
+            let tru = somot - sohai;
+            showketqua("Phép trừ", tru);
+        }
+        function phepNhan(){
+            let so1txt = document.getElementById("so1")
+            let somot = parseFloat(so1txt.value);
+            let so2txt = document.getElementById("so2")
+            let sohai = parseFloat(so2txt.value);
+            let nhan = somot*sohai;
+            showketqua("Phép nhân", nhan);
+            }
+        function phepChia(){
+            let so1txt = document.getElementById("so1")
+            let somot = parseFloat(so1txt.value);
+            let so2txt = document.getElementById("so2")
+            let sohai = parseFloat(so2txt.value);
+            let chia = somot/sohai;
+            showketqua("Phép chia", chia);
+        }
+
+
+    </script>
+    
+</body>
+</html>
